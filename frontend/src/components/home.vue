@@ -258,8 +258,8 @@
 </template>
 
 <script setup>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
+import Header from '../components/header.vue';
+import Footer from '../components/footer.vue';
 
 // Example icons - replace with actual paths in your assets/icons folder
 import birthCertificateIcon from '../assets/img.png'; // Using ../assets/img.png as placeholder icons
