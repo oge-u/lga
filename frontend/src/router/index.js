@@ -108,7 +108,7 @@ const router = createRouter({
       { path: '/cluster-admin', name: 'ClusterAdminDashboard', component: ClusterAdminDashboard},
       { path: '/bursury-admin', name: 'BursuryAdminDashboard', component: BursuryAdminDashboard},
 
-      { path: '/admin/user-management', name: 'admin-user-management', component: AdminUserManagementPage },
+      { path: '/admin/user-management', name: 'AdminUserManagement', component: AdminUserManagementPage },
 
 
       { path: '/admin/applications/death-certificates', component: DeathCertificates, name: DeathCertificates },
