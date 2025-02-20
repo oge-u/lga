@@ -1,0 +1,353 @@
+/* src/style.css */
+:root {
+  --primary-green: #004b40;
+  --light-gray: #f9f9f9;
+  --text-color-dark: #333;
+  --text-color-gray: #777;
+  --font-family-base: sans-serif;
+  --feature-card-mid-color: #e0f7fa;
+  --apply-now-bg-color: #004b40; /* Apply Now Section Background */
+  --feature-button-color: var(--primary-green);
+  --header-bg-color: #001a33; /* Dark Blue Header Background */
+  --header-apply-button-bg: #00cc99; /* Green 'APPLY NOW' Button in Header */
+  --header-apply-button-text: #fff; /* White text for header button */
+  --section-bg-white: #fff; /* White background for sections */
+  --section-bg-light-mint: #e0f7fa; /* Light Mint Background for About/How-to-Apply */
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--text-color-dark);
+  background-color: var(--light-gray);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ... (previous styles for feature cards, service cards etc. remain) ... */
+
+/* New Styles for Sections and Header */
+
+/* Header Styles - Overriding previous header styles */
+.website-header {
+    background-color: var(--header-bg-color); /* Dark blue header background */
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 50px; /* Adjusted logo height for new header */
+    margin-right: 2rem;
+}
+
+.site-name, .site-portal { /* Remove site title styling from previous header if not needed */
+    display: none; /* Hide site title if not required in new header */
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center; /* Vertically align items in nav */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.header-apply-button, .hero-apply-button, .about-get-started-button, .how-to-apply-get-started-button, .faq-read-more-button, .faq-read-more-button  {
+    background-color: var(--header-apply-button-bg); 
+    color: var(--header-apply-button-text); 
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.header-apply-button:hover {
+    background-color: #00a37a; 
+}
+
+
+/* Hero Section - Split Layout */
+.hero-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    align-items: center; /* Vertically align content */
+    background-color: var(--header-bg-color); /* Dark blue hero background to match header */
+    color: white; /* White text on hero section */
+}
+
+.hero-content {
+    flex: 1; /* Take up available space */
+    padding-right: 2rem; /* Space from image */
+}
+
+.hero-image-container {
+    flex-basis: 40%; /* Fixed width for image container */
+    max-width: 40%;
+    padding-left: 2rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem; /* Optional image border radius */
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8); /* Slightly lighter subtitle text */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-apply-button {
+    @apply .header-apply-button; /* Reuse header button styles */
+}
+
+/* Section Common Styles */
+.content-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--section-bg-white); /* Default white background */
+}
+
+.content-section.bg-light-mint {
+    background-color: var(--section-bg-light-mint); /* Light mint background for specific sections */
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-green);
+    text-align: center; /* Align section titles to left */
+    margin-bottom: 2.5rem;
+}
+
+.section-description {
+    color: var(--text-color-gray);
+    line-height: 1.7;
+    max-width: 900px;
+    margin-bottom: 2rem;
+    margin-left: 200px;
+    text-align: center; 
+}
+
+
+/* About Section */
+.about-section-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Space between text and image */
+}
+
+.about-section-text {
+    flex: 1; /* Take up available space */
+}
+
+.about-section-image-container {
+    flex-basis: 40%; /* Fixed width for image container */
+    max-width: 40%;
+}
+
+.about-section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.about-get-started-button {
+    @apply .header-apply-button; /* Reuse header button styles for "Get Started" */
+    background-color: var(--header-apply-button-bg); /* Green button */
+    color: var(--header-apply-button-text);
+    font-size: 1.1rem; /* Slightly larger for emphasis */
+}
+
+/* How to Apply Section */
+.how-to-apply-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive step columns */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.how-to-apply-step {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: white; /* White boxes for steps */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover animation */
+}
+
+.how-to-apply-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.how-to-apply-icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.how-to-apply-icon {
+    height: 60px; /* Larger icons for steps */
+    width: 60px;
+}
+
+.how-to-apply-step-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-color-dark);
+}
+
+.how-to-apply-step-description {
+    color: var(--text-color-gray);
+    line-height: 1.6;
+}
+
+.how-to-apply-get-started-button {
+    @apply .about-get-started-button; /* Reuse button styles */
+}
+
+
+/* FAQ Section */
+.faq-items {
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee; /* Separator for FAQ items */
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.faq-question-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Indicate clickability */
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color-dark);
+    margin-bottom: 0; /* Remove default margin */
+}
+
+.faq-toggle-icon { /* Style for toggle icon (you can add icon here, e.g., using FontAwesome) */
+    font-size: 1.2rem;
+    color: var(--text-color-gray);
+    transition: transform 0.2s ease;
+}
+
+.faq-toggle-icon.open {
+    transform: rotate(180deg); /* Rotate icon when FAQ is open */
+}
+
+.faq-answer {
+    color: var(--text-color-gray);
+    line-height: 1.6;
+    max-height: 0; /* Initially hide answer */
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding-top 0.3s ease; /* Smooth transition for answer */
+    padding-top: 0; /* Initially no padding */
+}
+
+.faq-answer.open {
+    max-height: 500px; /* Adjust max height as needed */
+    padding-top: 1rem; /* Add padding when answer is open */
+}
+
+.faq-read-more-button {
+    @apply .about-get-started-button; /* Reuse button styles */
+    background-color: var(--header-apply-button-bg); /* Green button */
+    color: var(--header-apply-button-text);
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Contact Section */
+.contact-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove link underline */
+    color: inherit; /* Inherit text color from parent */
+    transition: transform 0.2s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon-container {
+    width: 70px; /* Fixed icon size */
+    height: 70px;
+    border-radius: 50%; /* Circle shape */
+    background-color: var(--header-bg-color); /* Dark blue circle background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-icon {
+    width: 40px; /* Icon inside circle */
+    height: 40px;
+    filter: brightness(0) invert(1); /* Invert icon color to white for dark background */
+}
+
+.contact-button-text {
+    font-weight: bold;
+    color: var(--text-color-dark); /* Dark text color for button labels */
+}
+
+
