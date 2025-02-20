@@ -29,7 +29,7 @@ import ClusterAdminDashboard from '../components/ClusterAdminDashboard.vue';
 import BursuryAdminDashboard from '../components/BursuryAdminDashboard.vue'
 
 
-import AdminUserManagementPage from '../components/AdminManagement.vue';
+import AdminUserManagementPage from '../components/adminManagement.vue';
 
 
 import DeathCertificates from '../views/DeathCertificates.vue';
