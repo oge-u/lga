@@ -8,9 +8,9 @@
         <a href="#" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#how-to-apply" class="nav-link">How to Apply</a>
-        <a href="#" class="nav-link">Verify</a>
-        <a href="#" class="nav-link">Support</a>
-        <a href="#" class="nav-link">Login</a>
+        <router-link to="/login" class="nav-link">
+          Login
+        </router-link>
         <button class="header-apply-button">APPLY NOW</button>
       </nav>
     </div>

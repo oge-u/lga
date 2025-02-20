@@ -22,6 +22,7 @@
         <button @click.prevent="handleSubmit" class="login-button">Login</button>
         <p class="register-link">Don't have an account? <router-link to="/register">Register here</router-link></p>
       </div>
+      <p class="register-link">Admin? <router-link to="/admin/login">Register here</router-link></p>
     </div>
   </div>
 </template>
